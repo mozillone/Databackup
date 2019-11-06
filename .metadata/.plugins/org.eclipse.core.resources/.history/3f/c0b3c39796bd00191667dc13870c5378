@@ -1,0 +1,32 @@
+package SeleniumModules;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class Scrollpage {
+	
+	static WebDriver driver;
+	
+	
+	@BeforeClass
+	public void beforeclass(){
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\4195\\Downloads\\Version 76.0.3865.10\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	
+	@Test
+	
+	public void scrollvertical(){
+			
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\4195\\Downloads\\Version 76.0.3865.10\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		
+	}
+
+}

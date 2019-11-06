@@ -1,0 +1,14 @@
+package SeleniumModules;
+
+import org.testng.annotations.Test;
+
+public class Scrollpage {
+	
+	@Test
+	
+	public void scrollvertical(){
+			
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\4195\\Downloads\\Version 76.0.3865.10\\chromedriver.exe");
+	}
+
+}

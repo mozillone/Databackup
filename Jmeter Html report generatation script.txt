@@ -1,0 +1,18 @@
+java -jar ApacheJmeter.jar -g C:\Users\4195\Downloads\apache-jmeter-5.1.1\bin\samplereport.jtl -o C:\Users\4195\Downloads\newfolder
+
+
+
+
+If you need 55 users added each minute during 1 hour, you set up should look like:
+
+Number of Threads: 3300 (55 users x 60 minutes)
+Ramp-up: 3600 (1 hour == 3600 seconds)
+Loop Count: Forever
+Scheduler -> Duration: 14400 (3600 seconds in hour x 4)
+
+
+
+Number of Threads: 36000 (600 users x 60 minutes)
+Ramp-up: 36000 (1 hour == 3600 seconds)
+Loop Count: Forever
+Scheduler -> Duration: 14400 (3600 seconds in hour x 4)

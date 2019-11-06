@@ -1,0 +1,49 @@
+package SeleniumModules;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Readtooltip {
+	
+	static WebDriver driver;
+	
+	public static void main(String[] args){
+		
+//System.setProperty("webdriver.chrome.driver", "C:\\Users\\4195\\Downloads\\Version 77.0.3865.10\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\4195\\Downloads\\Version 76.0.3865.10\\chromedriver.exe");
+driver = new ChromeDriver();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("test-type");
+options.addArguments("start-maximized");
+options.addArguments("--enable-automation");
+options.addArguments("test-type=browser");
+options.addArguments("disable-infobars");
+
+		
+		
+		driver.get("http://demo.guru99.com/test/social-icon.html");
+		
+		driver.manage().window().maximize();
+		
+		String expectedtitle = "Github";
+		
+		WebElement tootltip = driver.findElement(By.xpath(".//*[@class='soc-ico show-round']/a[4]"));
+		
+		String actualtitle = tootltip.getAttribute("title");
+		
+		System.out.println("Actual title of tooltip  "+ actualtitle);
+		
+		if (actualtitle.equals(expectedtitle)){
+			System.out.println("Title is as expected");
+		}
+		
+		
+		driver.close();
+		
+		
+	}
+
+}
